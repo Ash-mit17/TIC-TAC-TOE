@@ -40,7 +40,7 @@ if(i++%2!=0)
     turn=turn==1?2:1;}
     if(i==9)
     {$(".win").text("Match Drawn");
-    setTimeout(function (){location.reload()},100)
+    location.reload()}
 }
 else
 {
@@ -62,7 +62,9 @@ else
     turn=turn==1?2:1;}
     if(i==9)
     {$(".win").text("Match Drawn")
-    location.reload()}
+
+    setTimeout(function (){location.reload()},1000)
+}
 }})
 
 function decideWinner(xs, os) {
@@ -94,4 +96,5 @@ function decideWinner(xs, os) {
     var audio = new Audio('snare.mp3');
     audio.play();
     $(".win").text(val+" is WINNER HURRAY!!")
+    setTimeout(function (){location.reload()},1000)
   }
