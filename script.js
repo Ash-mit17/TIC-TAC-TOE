@@ -38,6 +38,9 @@ if(i++%2!=0)
     if(flag==0){
     $(".win").text("Player "+Number(turn)+" turn")
     turn=turn==1?2:1;}
+    if(i==9)
+    {$(".win").text("Match Drawn");
+    location.reload()}
 }
 else
 {
@@ -57,6 +60,9 @@ else
     if(flag==0){
     $(".win").text("Player "+Number(turn)+" turn")
     turn=turn==1?2:1;}
+    if(i==9)
+    {$(".win").text("Match Drawn")
+    location.reload()}
 }})
 
 function decideWinner(xs, os) {
