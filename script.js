@@ -40,7 +40,7 @@ if(i++%2!=0)
     turn=turn==1?2:1;}
     if(i==9)
     {$(".win").text("Match Drawn");
-    location.reload()}
+    setTimeout(function (){location.reload()},100)
 }
 else
 {
