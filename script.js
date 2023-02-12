@@ -31,7 +31,7 @@ if(i++%2!=0)
         var won=decideWinner(xs,os)
         if(won!=='Draw')
         {
-            displayWinner("X",won)
+            displayWinner(won)
             flag=1;
         }
     }
@@ -53,7 +53,7 @@ else
         var won=decideWinner(xs,os)
         if(won!=='Draw')
         {
-            displayWinner("O",won)
+            displayWinner(won)
             flag=1;
         }
     }
@@ -71,10 +71,10 @@ function decideWinner(xs, os) {
     for (let i = 0; i < wins.length; i++) {
       const win = wins[i];
       if (win.every(index => xs.includes(index))) {
-        return "X wins";
+        return "X WINS HURRAY!!!";
       }
       if (win.every(index => os.includes(index))) {
-        return "O wins";
+        return "O WINS HURRAY";
       }
     }
     return "Draw";
@@ -91,10 +91,10 @@ function decideWinner(xs, os) {
     [2, 4, 6]
   ];
   
-  function displayWinner(val,key)
+  function displayWinner(key)
   {
     var audio = new Audio('snare.mp3');
     audio.play();
-    $(".win").text(val+" is WINNER HURRAY!!")
+    $(".win").text(key)
     setTimeout(function (){location.reload()},1000)
   }
