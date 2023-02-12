@@ -18,6 +18,7 @@ $("#O").click(function(){
 let i=1;
 let turn =2;
 var flag=0;
+var curr="X"
 
 $(".item").click(function(event){
 if(i++%2!=0)
@@ -39,7 +40,7 @@ if(i++%2!=0)
     if(flag==0){
     $(".win").text("Player "+Number(turn)+" turn")
     turn=turn==1?2:1;}
-    if(i==9)
+    if(i==11)
     {$(".win").text("Match Drawn");
     location.reload()}
 }
@@ -62,7 +63,7 @@ else
     if(flag==0){
     $(".win").text("Player "+Number(turn)+" turn")
     turn=turn==1?2:1;}
-    if(i==9)
+    if(i==11)
     {$(".win").text("Match Drawn")
 
     setTimeout(function (){location.reload()},1000)
