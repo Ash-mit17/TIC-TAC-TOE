@@ -95,6 +95,6 @@ function decideWinner(xs, os) {
   {
     var audio = new Audio('snare.mp3');
     audio.play();
-    $(".win").text(val+" is WINNER HURRAY!!")
+    $(".win").text(val+" is WINNER HURRAY!!!")
     setTimeout(function (){location.reload()},1000)
   }
