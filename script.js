@@ -25,13 +25,14 @@ if(i++%2!=0)
     var audio=new Audio("yellow.mp3")
     audio.play()
     $("#"+event.target.id).addClass(ch1)
+    curr=(i%2!=0)?ch2:ch1
     xs.push(event.target.id-1)
-    if(i>=5)
+    if(i>=5 && flag==0)
     {
         var won=decideWinner(xs,os)
         if(won!=='Draw')
         {
-            displayWinner(won)
+            displayWinner(curr)
             flag=1;
         }
     }
@@ -46,14 +47,15 @@ else
 {
     var audio=new Audio("yellow.mp3")
     audio.play()
+    curr=curr=(i%2!=0)?ch2:ch1
     $("#"+event.target.id).addClass(ch2)
     os.push(event.target.id-1)
-    if(i>=5)
+    if(i>=5 && flag==0)
     {
         var won=decideWinner(xs,os)
         if(won!=='Draw')
         {
-            displayWinner(won)
+            displayWinner(curr)
             flag=1;
         }
     }
@@ -95,6 +97,7 @@ function decideWinner(xs, os) {
   {
     var audio = new Audio('snare.mp3');
     audio.play();
-    $(".win").text(key)
+    $(".win").text(key+" is the WINNER HURRAY!!!")
     setTimeout(function (){location.reload()},1000)
   }
+
