@@ -16,6 +16,10 @@ $("#O").click(function(){
     ch2='X'
 })
 
+$(".rebox").click(function(){
+  location.reload()
+})
+
 let i=1;
 let turn =2;
 var flag=0;

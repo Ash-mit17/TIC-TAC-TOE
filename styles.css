@@ -97,6 +97,9 @@ h1,h2,h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
 }
+.rebox{
+    background-color: red
+}
 .foot
 {
     padding-top: 15px 0 15px 0;
