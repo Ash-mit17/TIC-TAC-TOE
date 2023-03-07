@@ -2,6 +2,7 @@ let xs=[]
 let os=[]
 let computer=[]
 
+
 var ch1='z'
 var ch2='x'
 $("#X").click(function(){
@@ -19,6 +20,17 @@ let i=1;
 let turn =2;
 var flag=0;
 var curr="X"
+
+$(document).on("click",function(event){
+  if(i===1 && (event.target.id==='X' || event.target.id==='O'))
+  {
+    console.log(event.target.id)
+  }
+  else if(i===1){
+    alert("Please make a choice")
+    location.reload()
+  }
+})
 
 $(".item").click(function(event){
 if(i++%2!=0)

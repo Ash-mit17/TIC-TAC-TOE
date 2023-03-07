@@ -82,6 +82,7 @@ h1,h2,h3{
 {
     height: 171px;
     width: 100%;
+    align-items: center;
     background-color: #FFB6B9;
 }
 .win
@@ -90,6 +91,11 @@ h1,h2,h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: #E84545;
+}
+.reload{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
 }
 .foot
 {
