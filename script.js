@@ -56,7 +56,7 @@ if(i++%2!=0)
     if(flag==0){
     $(".win").text("Player "+Number(turn)+" turn")
     turn=turn==1?2:1;}
-    if(i==11)
+    if(i==10)
     {$(".win").text("Match Drawn");
     location.reload()}
 }
